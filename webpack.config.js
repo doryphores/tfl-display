@@ -8,20 +8,21 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        use: { loader: 'babel-loader' }
+        use: { loader: 'babel-loader' },
       }
     ]
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({
-      title: 'Development'
-    }),
+    new HtmlWebpackPlugin({ title: 'Development' }),
   ],
   devServer: {
     contentBase: './dist'

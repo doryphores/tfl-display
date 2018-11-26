@@ -1,0 +1,30 @@
+{
+  "name": "tfl-display",
+  "version": "1.0.0",
+  "description": "Tfl kiosk for Raspberry pi",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development"
+  },
+  "author": "Martin Laine",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  }
+}

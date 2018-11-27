@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import { arrivalsFor } from './api'
 import './styles'
 import Container from './container'
 import Heading from './heading'
@@ -20,3 +21,5 @@ ReactDOM.render(
   </Container>,
   appContainer
 )
+
+// arrivalsFor('490001007AB', 'inbound')

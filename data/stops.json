@@ -1,0 +1,12 @@
+{
+  "Buses": {
+    "Towards Crystal Palace": {
+      "stopID": "490001007AB",
+      "direction": "inbound"
+    },
+    "Towards Penge": {
+      "stopID": "490001007AB",
+      "direction": "outbound"
+    }
+  }
+}

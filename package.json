@@ -4,7 +4,7 @@
   "description": "Tfl kiosk for Raspberry pi",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server --mode development --host 0.0.0.0"
   },
   "author": "Martin Laine",
   "license": "ISC",

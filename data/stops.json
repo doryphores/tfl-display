@@ -1,12 +1,30 @@
 {
-  "Buses": {
-    "Towards Crystal Palace": {
+  "Buses": [
+    {
+      "label": "Towards Crystal Palace",
       "stopID": "490001007AB",
-      "direction": "inbound"
+      "direction": "inbound",
+      "modes": ["bus"]
     },
-    "Towards Penge": {
+    {
+      "label": "Towards Penge",
       "stopID": "490001007AB",
-      "direction": "outbound"
+      "direction": "outbound",
+      "modes": ["bus"]
     }
-  }
+  ],
+  "Trains": [
+    {
+      "label": "Towards London Bridge",
+      "stopID": "910GANERLEY",
+      "direction": "inbound",
+      "modes": ["overground", "national-rail"]
+    },
+    {
+      "label": "Towards Croydon",
+      "stopID": "910GANERLEY",
+      "direction": "outbound",
+      "modes": ["overground", "national-rail"]
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { arrivalsFor } from './api'
 import './styles'
+import App from './app'
 import Container from './container'
 import Heading from './heading'
 
@@ -11,14 +11,14 @@ appContainer.classList.add('container')
 document.body.appendChild(appContainer)
 
 ReactDOM.render(
-  <Container fullWidth>
+  <App>
     <Container column width='50%'>
       <Heading>Buses</Heading>
     </Container>
     <Container column width='50%'>
       <Heading>Trains</Heading>
     </Container>
-  </Container>,
+  </App>,
   appContainer
 )
 

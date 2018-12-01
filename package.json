@@ -9,17 +9,18 @@
   "author": "Martin Laine",
   "license": "ISC",
   "dependencies": {
-    "emotion": "^9.2.12",
+    "@emotion/core": "^10.0.0",
+    "@emotion/styled": "^10.0.0",
     "national-rail-darwin": "^1.0.7",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-emotion": "^9.2.12"
+    "react-dom": "^16.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "babel-plugin-emotion": "^10.0.0",
     "clean-webpack-plugin": "^1.0.0",
     "css-loader": "^1.0.1",
     "html-webpack-plugin": "^3.2.0",
@@ -36,7 +37,8 @@
       "@babel/preset-react"
     ],
     "plugins": [
-      "@babel/plugin-proposal-class-properties"
+      "@babel/plugin-proposal-class-properties",
+      "emotion"
     ]
   }
 }

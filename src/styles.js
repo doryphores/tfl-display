@@ -1,7 +1,7 @@
 import { injectGlobal } from 'react-emotion'
 
 injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:400,400i');
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 
   html, body {
     overflow: hidden;
@@ -10,7 +10,7 @@ injectGlobal`
     padding: 0;
     color: #fff;
     background-color: #4527a0;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
 
   .container {

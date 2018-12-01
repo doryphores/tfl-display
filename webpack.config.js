@@ -1,31 +1,48 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlPlugin = require('html-webpack-plugin')
+const CleanPlugin = require('clean-webpack-plugin')
+
+const outputBase = path.resolve(__dirname, 'dist')
 
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    path: outputBase
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: ['.js', '.jsx', '.json', '.scss']
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        use: { loader: 'babel-loader' },
+        use: { loader: 'babel-loader' }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader"
+        ]
       }
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({ title: 'Development' }),
+    new CleanPlugin(['dist']),
+    new MiniCssExtractPlugin(),
+    new HtmlPlugin({
+      inject: false,
+      template: require('html-webpack-template'),
+      title: 'Departure board',
+      appMountId: 'app'
+    })
   ],
   devServer: {
-    contentBase: './dist'
+    contentBase: outputBase
   },
   devtool: 'source-map',
 }

@@ -26,7 +26,9 @@ export default class Buses extends React.Component {
         arrivals: await arrivalsFor(stop.stopID)
       }))
     )
+
     this.setState({ stops })
+
     setTimeout(this.refresh, REFRESH_INTERVAL)
   }
 

@@ -1,5 +1,4 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
 const CleanPlugin = require('clean-webpack-plugin')
 
@@ -12,7 +11,7 @@ module.exports = {
     path: outputBase
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.scss']
+    extensions: ['.js', '.jsx', '.json']
   },
   module: {
     rules: [
@@ -20,20 +19,11 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
         use: { loader: 'babel-loader' }
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
-        ]
       }
     ]
   },
   plugins: [
     new CleanPlugin(['dist']),
-    new MiniCssExtractPlugin(),
     new HtmlPlugin({
       inject: false,
       template: require('html-webpack-template'),
